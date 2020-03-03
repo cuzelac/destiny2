@@ -1,6 +1,10 @@
 // personal wishlist for Destiny Item Manager
 // lines generated from d2gunsmith.com
 
+// Line in the Sand
+dimwishlist:item=946443267&perks=1483536627,247725512,1771339417 // ionized/rh/fl from Aztecross
+dimwishlist:item=946443267&perks=1483536627,247725512,2284787283 // ionized/rh/cc from Aztecross
+
 // Last Hope
 dimwishlist:item=3622137132&perks=1885400500,2779035018,2458213969
 dimwishlist:item=3622137132&perks=1885400500,2779035018,3425386926
