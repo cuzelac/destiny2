@@ -1,6 +1,12 @@
 // personal wishlist for Destiny Item Manager
 // lines generated from d2gunsmith.com
 
+// Exile's Curse
+dimwishlist:item=679281855&perks=839105230,280464955,1264398905 // ab/fp/celerity
+
+// Astral Horizon
+dimwishlist:item=1697682876&perks=3161816588,47981717 // ss/os
+
 // Interference VI
 dimwishlist:item=2257180473&perks=3301904089,2284787283,2888557110 // sg/cc/fc
 
