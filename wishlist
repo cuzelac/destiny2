@@ -1,9 +1,10 @@
 // personal wishlist for Destiny Item Manager
 // lines generated from d2gunsmith.com
 
-// Seventh Seraph
-dimwishlist:item=3937866388&perks=3523296417,3708227201 // demo/surrounded
-dimwishlist:item=3937866388&perks=3523296417,1546637391 // demo/vw
+// Seventh Seraph SI-2
+dimwishlist:item=3937866388&perks=3523296417,3708227201                      // demo/surrounded
+dimwishlist:item=3937866388&perks=3523296417,1546637391                      // demo/vw
+dimwishlist:item=3937866388&perks=202670084,3142289711,4267945040,1546637391 // bf/ar/fats/vw
 
 // Exile's Curse
 dimwishlist:item=679281855&perks=839105230,280464955,1264398905 // ab/fp/celerity
