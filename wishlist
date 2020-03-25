@@ -1,6 +1,9 @@
 // personal wishlist for Destiny Item Manager
 // lines generated from d2gunsmith.com
 
+// Gunnora's Axe
+dimwishlist:item=2326716489&perks=3142289711,706527188,47981717 // ar/qd/os
+
 // Seventh Seraph SI-2
 dimwishlist:item=3937866388&perks=3523296417,3708227201                      // demo/surrounded
 dimwishlist:item=3937866388&perks=3523296417,1546637391                      // demo/vw
