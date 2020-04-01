@@ -1,6 +1,11 @@
 // personal wishlist for Destiny Item Manager
 // lines generated from d2gunsmith.com
 
+// Beloved
+dimwishlist:item=4190932264&perks=957782887,588594999 // ss/mt
+dimwishlist:item=4190932264&perks=957782887,706527188 // ss/qd
+dimwishlist:item=4190932264&perks=280464955,588594999 // fp/mt
+
 // Seventh Seraph Saw
 dimwishlist:item=2582755344&perks=2869569095,1771339417 // fp/fl
 dimwishlist:item=2582755344&perks=2284787283,1771339417 // cc/fl
