@@ -1,6 +1,10 @@
 // personal wishlist for Destiny Item Manager
 // lines generated from d2gunsmith.com
 
+// Seventh Seraph Saw
+dimwishlist:item=2582755344&perks=2869569095,1771339417 // fp/fl
+dimwishlist:item=2582755344&perks=2284787283,1771339417 // cc/fl
+
 // Distant Tumulus
 dimwishlist:item=2807687156&perks=2284787283,1771339417 // cc/fl
 
