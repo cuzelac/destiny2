@@ -1,6 +1,10 @@
 // personal wishlist for Destiny Item Manager
 // lines generated from d2gunsmith.com
 
+// Seventh Seraph Carbine
+dimwishlist:item=1561006927&perks=202670084,1885400500,3161816588,2846385770 // fb/rr/ss/rf MAX RANGE
+dimwishlist:item=1561006927&perks=1354429876,3425386926                      // 4th/rampage PVE
+
 // Uriel's Gift
 dimwishlist:item=3863882743&perks=1885400500,1359896290,588594999 // ar/dsr/mttd
 
