@@ -1,6 +1,9 @@
 // personal wishlist for Destiny Item Manager
 // lines generated from d2gunsmith.com
 
+// Uriel's Gift
+dimwishlist:item=3863882743&perks=1885400500,1359896290,588594999 // ar/dsr/mttd
+
 // Jian 7
 dimwishlist:item=1162247618&perks=1885400500,2387244414,2846385770 // rr/zm/rf
 dimwishlist:item=1162247618&perks=1885400500,280464955,2846385770  // rr/fp/rf
