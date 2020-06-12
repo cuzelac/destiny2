@@ -1,6 +1,10 @@
 // personal wishlist for Destiny Item Manager
 // lines generated from d2gunsmith.com
 
+// Whispering Slab
+
+dimwishlist:item=211938782&perks=2846385770,47981717 // rf/os
+
 // Seventh Seraph Carbine
 dimwishlist:item=1561006927&perks=202670084,1885400500,3161816588,2846385770 // fb/rr/ss/rf MAX RANGE
 dimwishlist:item=1561006927&perks=1354429876,3425386926                      // 4th/rampage PVE
