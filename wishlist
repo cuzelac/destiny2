@@ -2,8 +2,11 @@
 // lines generated from d2gunsmith.com
 
 // Whispering Slab
-
-dimwishlist:item=211938782&perks=2846385770,47981717 // rf/os
+dimwishlist:item=211938782&perks=2846385770,47981717   // rf/os
+dimwishlist:item=211938782&perks=2450788523,3350417888 // kw/sa
+dimwishlist:item=211938782&perks=2450788523,3108830275 // kw/u
+dimwishlist:item=211938782&perks=706527188,47981717    // qd/os
+dimwishlist:item=211938782&perks=706527188,1546637391  // qd/vw
 
 // Seventh Seraph Carbine
 dimwishlist:item=1561006927&perks=202670084,1885400500,3161816588,2846385770 // fb/rr/ss/rf MAX RANGE
