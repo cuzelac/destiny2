@@ -8,6 +8,12 @@ dimwishlist:item=211938782&perks=2450788523,3108830275 // kw/u
 dimwishlist:item=211938782&perks=706527188,47981717    // qd/os
 dimwishlist:item=211938782&perks=706527188,1546637391  // qd/vw
 
+// Truthteller
+dimwishlist:item=1946491241&perks=2458213969 // mkk
+
+// Cold Denial
+dimwishlist:item=1216130969&perks=2779035018,2458213969 // ff/mkk
+
 // Seventh Seraph Carbine
 dimwishlist:item=1561006927&perks=202670084,1885400500,3161816588,2846385770 // fb/rr/ss/rf MAX RANGE
 dimwishlist:item=1561006927&perks=1354429876,3425386926                      // 4th/rampage PVE
