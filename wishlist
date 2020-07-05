@@ -1,15 +1,19 @@
 // personal wishlist for Destiny Item Manager
 // lines generated from d2gunsmith.com
 
+// Dire Promise
+dimwishlist:item=2742838701&perks=47981717,2846385770,150943607 // os/rf, range mw
+
 // Forward Path
-dimwishlist:item=1690783811&perks=2779035018,2458213969         // ff/mkc
-dimwishlist:item=1690783811&perks=13792278,4152709778,518224747 // hitmark/gaze, handling mw
-dimwishlist:item=1690783811&perks=1359896290,2458213969         // dsr/mkc
-dimwishlist:item=1690783811&perks=1359896290,1890422124         // dsr/ttt
-dimwishlist:item=1690783811&perks=1359896290,11551321           // dsr/grip
+dimwishlist:item=1690783811&perks=2779035018,2458213969                      // ff/mkc
+dimwishlist:item=1690783811&perks=13792278,4152709778,518224747              // hitmark/gaze, handling mw
+dimwishlist:item=1690783811&perks=1359896290,2458213969                      // dsr/mkc
+dimwishlist:item=1690783811&perks=1359896290,1890422124                      // dsr/ttt
+dimwishlist:item=1690783811&perks=1359896290,11551321                        // dsr/grip
+dimwishlist:item=1690783811&perks=679077873,3142289711,1359896290,1890422124 // rsst/ar/dsr/ttt, MAX RANGE
 
 // Distant Tumulus
-dimwishlist:item=2807687156&perks=202670084,3142289711,47981717,150943607   // fb/ar/os range mw, MAX RANGE
+dimwishlist:item=2807687156&perks=202670084,3142289711,47981717,150943607   // fb/ar/os, range mw, MAX RANGE
 dimwishlist:item=2807687156&perks=839105230,106909392,2284787283,1771339417 // ab/tm/cc/fl
 
 // Whispering Slab
