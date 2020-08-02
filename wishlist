@@ -1,6 +1,13 @@
 // personal wishlist for Destiny Item Manager
 // lines generated from d2gunsmith.com
 
+// The Summoner
+dimwishlist:item=1907698332&perks=1359896290,3511092054                      // dsr/ec
+dimwishlist:item=1907698332&perks=588594999,3511092054                       // mt/ec
+dimwishlist:item=1907698332&perks=3250034553,1885400500,588594999,2846385770 // hfr/rr/mt/rf
+dimwishlist:item=1907698332&perks=1359896290,2846385770                      // dsr/rf
+dimwishlist:item=1907698332&perks=2387244414,2846385770                      // zm/rf
+
 // Nature of the Beast
 dimwishlist:item=1835747805&perks=3142289711,706527188,2846385770 // ar/qd/rf
 
@@ -99,7 +106,7 @@ dimwishlist:item=679281855&perks=839105230,280464955,1264398905 // ab/fp/celerit
 // Astral Horizon
 dimwishlist:item=1697682876&perks=791862061,3161816588,47981717  // am/ss/os
 dimwishlist:item=1697682876&perks=3142289711,3161816588,47981717 // ar/ss/os
-
+dimwishlist:item=1697682876&perks=706527188,47981717             // qd/os
 
 // Interference VI
 dimwishlist:item=2257180473&perks=3301904089,2284787283,2888557110 // sg/cc/fc
