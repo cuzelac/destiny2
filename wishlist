@@ -2,6 +2,9 @@
 // lines generated from d2gunsmith.com
 // put the following URL in DIM's 'Wish List' config: https://raw.githubusercontent.com/cuzelac/destiny2/master/wishlist
 
+// Eye of Sol
+dimwishlist:item=3164743584&perks=3250034553,3142289711,957782887,47981717 // hfr/ar/ss/os
+
 // The Summoner
 dimwishlist:item=1907698332&perks=1359896290,3511092054                      // dsr/ec
 dimwishlist:item=1907698332&perks=588594999,3511092054                       // mt/ec
