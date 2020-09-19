@@ -1,5 +1,6 @@
 // personal wishlist for Destiny Item Manager
 // lines generated from d2gunsmith.com
+// put the following URL in DIM's 'Wish List' config: https://raw.githubusercontent.com/cuzelac/destiny2/master/wishlist
 
 // The Summoner
 dimwishlist:item=1907698332&perks=1359896290,3511092054                      // dsr/ec
