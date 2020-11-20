@@ -2,6 +2,10 @@
 // lines generated from d2gunsmith.com
 // put the following URL in DIM's 'Wish List' config: https://raw.githubusercontent.com/cuzelac/destiny2/master/wishlist
 
+// Stars in Shadow
+dimwishlist:item=2050789284&perks=3250034553,3142289711,150943607                       // fb/ar/mw:r
+dimwishlist:item=2050789284&perks=3250034553,3142289711,1168162263,1015611457,150943607 // crucible god roll: fb/ar/o/kc/mw:r
+
 // Eye of Sol
 dimwishlist:item=3164743584&perks=3250034553,3142289711,957782887,47981717 // hfr/ar/ss/os
 
