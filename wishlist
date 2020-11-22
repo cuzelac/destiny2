@@ -3,8 +3,8 @@
 // put the following URL in DIM's 'Wish List' config: https://raw.githubusercontent.com/cuzelac/destiny2/master/wishlist
 
 // Friction Fire
-dimwishlist:item=1513993763&perks=1482024992,3142289711,2387244414,3592538738,150943607 // pve god roll? - sb/ar/zm/ws/mw:r
-dimwishlist:item=1513993763&perks=2387244414,3592538738                                 // pve - zm/ws
+dimwishlist:item=1513993763&perks=1482024992,3142289711,2387244414,3592538738 // pve god roll? - sb/ar/zm/ws
+dimwishlist:item=1513993763&perks=2387244414,3592538738                       // pve - zm/ws
 
 // Stars in Shadow
 dimwishlist:item=2050789284&perks=3250034553,3142289711,150943607                       // fb/ar/mw:r
