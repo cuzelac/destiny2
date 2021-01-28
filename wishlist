@@ -2,6 +2,10 @@
 // lines generated from d2gunsmith.com
 // put the following URL in DIM's 'Wish List' config: https://raw.githubusercontent.com/cuzelac/destiny2/master/wishlist
 
+// Hailing Confusion
+dimwishlist:item=2870169846&perks=1168162263,3592538738 // general: ol/ws
+dimwishlist:item=2870169846&perks=3661387068,1885400500,2387244414,3511092054,1590375901 // stability: cc/ar/zm/ec/mw:s
+
 // Glacioclasm
 dimwishlist:item=1030895163&perks=3868766766,1645158859,2213355989 // crucible: 2pr/up/hir
 
