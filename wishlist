@@ -6,11 +6,15 @@
 dimwishlist:item=2870169846&perks=1168162263,3592538738 // general: ol/ws
 dimwishlist:item=2870169846&perks=3661387068,1885400500,2387244414,3511092054,1590375901 // stability: cc/ar/zm/ec/mw:s
 
+// Biting Winds
+dimwishlist:item=1621657423&perks=2801223209,3429800428,247725512,4082225868 // es/fas/rh/sb
+
 // Glacioclasm
 dimwishlist:item=1030895163&perks=3868766766,1645158859,2213355989 // crucible: 2pr/up/hir
 
 // Bonechiller
 dimwishlist:item=4037745684&perks=202670084,3142289711,280464955,47981717,2697220197 // pve max range - fb/ar/fp/os
+dimwishlist:item=4037745684&perks=3250034553,3142289711,280464955,47981717,150943607 // pve good - hfr/ar/fp/os/mw:range
 
 // Friction Fire
 dimwishlist:item=1513993763&perks=1482024992,3142289711,2387244414,3592538738 // pve god roll? - sb/ar/zm/ws
