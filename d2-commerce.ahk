@@ -9,28 +9,15 @@ setMouseDelay, 50
 
 POSTMASTER_CAPACITY := 20
 
-; dismantle toggle
-dismantle_toggle :=0
+;;
+;; Turn in 20 tokens
+;;
 
-F9::
-  ToolTip, Dismantling (F9)
-  dismantle_toggle := !dismantle_toggle
-  
-  while (dismantle_toggle = 1) {
-    Send {f down}
-    Sleep, 1050
-    Send {f up}
-    Sleep, 600
-  }
-  ToolTip
-return
-
-; Turn in tokens
 token_toggle := 0
 
-F10::
+F9::
   token_toggle := !token_toggle
-  ToolTip Turning in tokens (F10)
+  ToolTip Turning in tokens (F9)
 
   Loop, %POSTMASTER_CAPACITY% {
     Loop, 3 {
@@ -44,3 +31,23 @@ F10::
 
   ToolTip
 return
+
+;;
+;; Dismantle equipment (toggle)
+;;
+
+dismantle_toggle := 0
+
+F10::
+  ToolTip, Dismantling (F10)
+  dismantle_toggle := !dismantle_toggle
+  
+  while (dismantle_toggle = 1) {
+    Send {f down}
+    Sleep, 1050
+    Send {f up}
+    Sleep, 600
+  }
+  ToolTip
+return
+
