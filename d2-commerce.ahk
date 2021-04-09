@@ -21,7 +21,6 @@ F9::
 
   Loop, %POSTMASTER_CAPACITY% {
     Loop, 3 {
-      Click
       Sleep, 1000
     }
     if (token_toggle = 0) {
@@ -41,7 +40,7 @@ dismantle_toggle := 0
 F10::
   ToolTip, Dismantling (F10)
   dismantle_toggle := !dismantle_toggle
-  
+
   while (dismantle_toggle = 1) {
     Send {f down}
     Sleep, 1050
@@ -51,3 +50,21 @@ F10::
   ToolTip
 return
 
+;;
+;; Sell shaders (toggle)
+;;
+
+shader_toggle = 0
+
+F11::
+  shader_toggle := !shader_toggle
+  ToolTip, Selling shaders (F11)
+
+  while (shader_toggle = 1) {
+    Send {f down}
+    Sleep, 1000
+    Send {f up}
+    Sleep, 100
+  }
+  ToolTip
+return
