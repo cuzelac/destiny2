@@ -96,34 +96,51 @@ F12::
   toggle[this_hotkey] := !toggle[this_hotkey]
   if (!toggle[this_hotkey]) {
     return
+    ToolTip
   }
-  
-  total := 1
-  
-  ;~ tip_str := "Buy multiple from vendor (" . this_hotkey . ")"
-  tip_str := "Buy multiple from vendor ({1})`nCount: {2}"
-  ToolTip, % Format(tip_str, this_hotkey, total)
 
   ; store mouse position in orig_x and orig_y
   MouseGetPos, orig_x, orig_y
   
-  ;~ num_items := 0
-  InputBox, num_items, , "How many items?"
-  where_to_buy := [false, true, true]
-  
+  InputBox, num_items, how many?
+  OutputDebug, %num_items%
+
+  Gui, New
+  Gui, Add, Text,, Check the items you want to buy
+  Gui, Add, Text
+
+  ; add checkbox elements to gui horizontally
+  Loop %num_items% {
+    OutputDebug, creating checkbox number %A_Index%
+    Gui, Add, CheckBox, vcheckbox_out%A_Index% x+1 Checked, 
+  }
+
+  Gui, Add, Button, default, OK
+  Gui, Show,, Select Items
+
+  return
+
+  ButtonOK:
+  Gui, Submit
+
   if (!num_items) {
     return
-    ToolTip
   }
+  
+  total := 1
+  tip_str := "Buy multiple from vendor ({1})`nCount: {2}"
+  ToolTip, % Format(tip_str, this_hotkey, total)
+  
+  MouseMove, orig_x, orig_y
   
   index := 1
   while (toggle[this_hotkey]) {
-    if (where_to_buy[index]) {
+    if (checkbox_out%index% = 1) {
       ;~ TestClick()
       ;~ Sleep, 1000
       DoClick()
     }
-    
+  
     if (index >= num_items) {
       index := 1
       total++
@@ -135,7 +152,7 @@ F12::
       index++
     }
   }
-
+  
   ToolTip
 return
 
