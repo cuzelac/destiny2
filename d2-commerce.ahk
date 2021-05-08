@@ -22,27 +22,30 @@ ITEM_HORIZ_PAD := 6
 toggle := {}
 
 /*
- * Don't forget that above here is a magic function
+ * AHK TREATS EVERYTHING ABOVE THE FIRST HOTKEY AS A SINGLE MAGIC FUNCTION
+ */
+ 
+/*
+ * General notes
+ * You can reassign hotkeys and things should just work
+ * Hotkey functions can generally be cancelled by pressing the hotkey again
+ */
+ 
+/*
+ * General TODO
+ * - Too much boilerplate
+ * - Look at AHK's OO features to see if they'd make it easier to navigate a vendor
  */
 
-;;
-;; Turn in 20 tokens
-;;
+/*
+ * Click in a loop
+ * Good for buying one thing repeatedly from a vendor
+ */
 
 F9::
   this_hotkey := A_ThisHotkey
   toggle[this_hotkey] := !toggle[this_hotkey]
   
-  ToolTip % "Turning in tokens (" . this_hotkey . ")"
-
-  Loop, %POSTMASTER_CAPACITY% {
-    Loop, 3 {
-      Click
-      Sleep, 1000
-    }
-    if (toggle[this_hotkey] = 0) {
-      break
-    }
   count := 0
   tip_str := "Clicking in a loop ({1})`nCount: {2}"
   
@@ -55,15 +58,14 @@ F9::
   ToolTip
 return
 
-;;
-;; Dismantle equipment (toggle)
-;;
+/*
+ * Press & hold F in a loop (toggle)
+ * Good for dismantling things under the mouse
+ */
 
 F10::
   this_hotkey := A_ThisHotkey
   toggle[this_hotkey] := !toggle[this_hotkey]
-
-  ToolTip, % "Dismantling (" . this_hotkey . ")"
   
   count := 0
   tip_str := "Dismantling in a loop ({1})`nCount: {2}"
@@ -77,6 +79,8 @@ F10::
   ToolTip
 return
 
+; Send an f key and hold it long enough for a dismantle
+; Includes padding sleep after
 DoDismantle(hold_time:=1050, padding:=600) {
   Send {f down}
   Sleep, hold_time
@@ -84,14 +88,14 @@ DoDismantle(hold_time:=1050, padding:=600) {
   Sleep, padding
 }
 
-;;
-;; Sell shaders (toggle)
-;;
+/*
+ * Dismantle shaders (toggle)
+ * Tuned to go faster since shaders dismantle quicker
+ */
 
 F11::
   this_hotkey := A_ThisHotkey
   toggle[this_hotkey] := !toggle[this_hotkey]
-  ToolTip, % "Selling shaders (" . this_hotkey . ")"
   count := 0
   tip_str := "Dismantling shaders ({1})`nCount: {2}"
 
@@ -104,9 +108,16 @@ F11::
   ToolTip
 return
 
-;;
-;; Spider material exchange
-;;
+/*
+ * Buy some items from a row at a vendor in a loop
+ * Usage:
+ *   1. Put your game in windowed mode at 1080p resolution
+ *   2. Put your mouse over the first item in the row
+ *   3. Press the hotkey (F12 currently)
+ *   4. Enter the # of items in the row (7 in Spider's Material Exchange)
+ *   5. Check the boxes that represent the items in the row you want to buy
+ *   6. Press the hotkey again to cancel the loop
+ */
 
 F12::
   this_hotkey := A_ThisHotkey
@@ -118,7 +129,6 @@ F12::
   }
 
   ; store mouse position in orig_x and orig_y
-  MouseGetPos, orig_x, orig_y
   ; store window ahk_id to work around bug that changes active window
   MouseGetPos, orig_x, orig_y, destiny_window_ahk_id
   
@@ -129,6 +139,7 @@ F12::
   ; InputBox behavior that changes active window
   WinActivate, ahk_id %destiny_window_ahk_id%
 
+  ; START building checkbox gui window
   Gui, New
   Gui, Add, Text,, Check the items you want to buy
   Gui, Add, Text
@@ -136,11 +147,13 @@ F12::
   ; add checkbox elements to gui horizontally
   Loop %num_items% {
     OutputDebug, creating checkbox number %A_Index%
-    Gui, Add, CheckBox, vcheckbox_out%A_Index% x+1 Checked, 
+    Gui, Add, CheckBox, vcheckbox_out%A_Index% x+28 Checked, 
   }
 
+  ; 2nd arg 'Button' + last arg 'OK' mean go to tag 'ButtonOK' below
   Gui, Add, Button, default, OK
   Gui, Show,, Select Items
+  ; END checkbox gui build
 
   return
 
@@ -152,7 +165,6 @@ F12::
   }
   
   total := 1
-  tip_str := "Buy multiple from vendor ({1})`nCount: {2}"
   tip_str := "Buy multiple from vendor row ({1})`nCount: {2}"
   ToolTip, % Format(tip_str, this_hotkey, total)
   
@@ -182,6 +194,8 @@ F12::
   ToolTip
 return
 
+; Don't actually click but put up a tool tip
+; for testing visually
 TestClick(padding:=1000) {
   ToolTip, CLICK, , , 1
   Sleep, 150
@@ -195,6 +209,8 @@ DoClick(padding:=1000) {
   Sleep, padding
 }
 
+; Move to the next item in a vendor's row
+; NB: globals have to be defined at the top of the file before the first function
 NextItem() {
   Global ITEM_WIDTH, ITEM_HORIZ_PAD
 
