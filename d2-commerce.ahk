@@ -101,9 +101,15 @@ F12::
 
   ; store mouse position in orig_x and orig_y
   MouseGetPos, orig_x, orig_y
+  ; store window ahk_id to work around bug that changes active window
+  MouseGetPos, orig_x, orig_y, destiny_window_ahk_id
   
   InputBox, num_items, how many?
   OutputDebug, %num_items%
+  
+  ; Switch back to d2 window to work around
+  ; InputBox behavior that changes active window
+  WinActivate, ahk_id %destiny_window_ahk_id%
 
   Gui, New
   Gui, Add, Text,, Check the items you want to buy
@@ -131,6 +137,7 @@ F12::
   tip_str := "Buy multiple from vendor ({1})`nCount: {2}"
   ToolTip, % Format(tip_str, this_hotkey, total)
   
+  WinActivate, ahk_id %destiny_window_ahk_id%
   MouseMove, orig_x, orig_y
   
   index := 1
