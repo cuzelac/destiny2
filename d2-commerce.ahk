@@ -43,6 +43,13 @@ F9::
     if (toggle[this_hotkey] = 0) {
       break
     }
+  count := 0
+  tip_str := "Clicking in a loop ({1})`nCount: {2}"
+  
+  while (toggle[this_hotkey] = 1) {
+    count += 1
+    ToolTip, % Format(tip_str, this_hotkey, count)
+    DoClick()
   }
 
   ToolTip
@@ -57,10 +64,16 @@ F10::
   toggle[this_hotkey] := !toggle[this_hotkey]
 
   ToolTip, % "Dismantling (" . this_hotkey . ")"
+  
+  count := 0
+  tip_str := "Dismantling in a loop ({1})`nCount: {2}"
 
   while (toggle[this_hotkey] = 1) {
+    count += 1
+    ToolTip, % Format(tip_str, this_hotkey, count)
     DoDismantle()
   }
+
   ToolTip
 return
 
@@ -79,10 +92,15 @@ F11::
   this_hotkey := A_ThisHotkey
   toggle[this_hotkey] := !toggle[this_hotkey]
   ToolTip, % "Selling shaders (" . this_hotkey . ")"
+  count := 0
+  tip_str := "Dismantling shaders ({1})`nCount: {2}"
 
   while (toggle[this_hotkey] = 1) {
+    count += 1
+    ToolTip, % Format(tip_str, this_hotkey, count)
     DoDismantle(1000, 100)
   }
+
   ToolTip
 return
 
@@ -135,6 +153,7 @@ F12::
   
   total := 1
   tip_str := "Buy multiple from vendor ({1})`nCount: {2}"
+  tip_str := "Buy multiple from vendor row ({1})`nCount: {2}"
   ToolTip, % Format(tip_str, this_hotkey, total)
   
   WinActivate, ahk_id %destiny_window_ahk_id%
