@@ -35,6 +35,7 @@ toggle := {}
  * General TODO
  * - Too much boilerplate
  * - Look at AHK's OO features to see if they'd make it easier to navigate a vendor
+ * - Organize functions & shortcuts better
  */
 
 /*
@@ -132,7 +133,7 @@ F12::
   ; store window ahk_id to work around bug that changes active window
   MouseGetPos, orig_x, orig_y, destiny_window_ahk_id
   
-  InputBox, num_items, how many?
+  InputBox, num_items, how many? (a row usually has 7)
   OutputDebug, %num_items%
   
   ; Switch back to d2 window to work around
@@ -140,6 +141,7 @@ F12::
   WinActivate, ahk_id %destiny_window_ahk_id%
 
   ; START building checkbox gui window
+  ; TODO it would be cool if 
   Gui, New
   Gui, Add, Text,, Check the items you want to buy
   Gui, Add, Text
@@ -147,6 +149,7 @@ F12::
   ; add checkbox elements to gui horizontally
   Loop %num_items% {
     OutputDebug, creating checkbox number %A_Index%
+    ; 'x+28' spaces out checkboxes so they're roughly above each item square
     Gui, Add, CheckBox, vcheckbox_out%A_Index% x+28 Checked, 
   }
 
