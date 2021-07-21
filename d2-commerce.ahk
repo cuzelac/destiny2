@@ -1,4 +1,4 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #maxThreadsPerHotkey, 2
 #SingleInstance Force ; always kill running instance of script if it exists
 ; #Warn  ; Enable warnings to assist with detecting common errors.
@@ -35,8 +35,62 @@ toggle := {}
  * General TODO
  * - Too much boilerplate
  * - Look at AHK's OO features to see if they'd make it easier to navigate a vendor
- * - Organize functions & shortcuts better
+ * - Organize functions & shortcuts better 
+
+/*
+ * Don't get sent to orbit by doing the following at least every 10m:
+ *  - Move twice
+ *  - Look twice
+ *  - Do two actions
+ * 
+ * For afk farming exp in Shattered Throne thrall room 
  */
+
+F8::
+  this_hotkey := A_ThisHotkey
+  toggle[this_hotkey] := !toggle[this_hotkey]
+  
+  count := 0
+  tip_str := "({1})`nCount: {2}"
+  
+  while (toggle[this_hotkey] = 1) {
+    ToolTip, % Format(tip_str, this_hotkey, count)
+    count += 1
+    
+    ; reload & switch weapon
+    PressKey("r")
+    RandomSleep(200, 400)
+    PressKey("~")
+    
+    ; Move forward and back
+    Random, walk_time, 50, 75
+    PressKey("w", walk_time, walk_time)
+    RandomSleep(50, 100)
+    PressKey("s", walk_time, walk_time)
+    
+    ; Move mouse up & down
+    move_amt := 100
+    MouseMove, 0 , move_amt, 95, R
+    RandomSleep(150, 400)
+    MouseMove, 0, -move_amt, 95, R
+    
+    ; Sleep for a minute
+    RandomSleep(60000,61000)
+  }
+
+  ToolTip
+return
+
+PressKey(key, min := 100, max := 200) {
+  Send, {%key% down}
+  RandomSleep(min, max)
+  Send, {%key% up}
+}
+
+RandomSleep(min, max) {
+  Random, sleep_time, min, max
+  Sleep, sleep_time
+}
 
 /*
  * Click in a loop
@@ -74,6 +128,7 @@ F10::
   while (toggle[this_hotkey] = 1) {
     count += 1
     ToolTip, % Format(tip_str, this_hotkey, count)
+    ;DoDismantle(hold_time := 4050) ; Exotics
     DoDismantle()
   }
 
