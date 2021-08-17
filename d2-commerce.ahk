@@ -36,6 +36,36 @@ toggle := {}
  * - Too much boilerplate
  * - Look at AHK's OO features to see if they'd make it easier to navigate a vendor
  * - Organize functions & shortcuts better 
+ */
+ 
+; Sell Vanguard tokens
+
+F7::
+  this_hotkey := A_ThisHotkey
+  toggle[this_hotkey] := !toggle[this_hotkey]
+  
+  count := 0
+  tip_str := "({1})`nCount: {2}"
+  
+  while (toggle[this_hotkey] = 1) {
+    ToolTip, % Format(tip_str, this_hotkey, count)
+    count += 1
+    
+    ; tokens: 1256,313
+    MouseMove 1256, 313
+    DoClick()
+    Sleep, 250
+    DoClick()
+    ; engram: 1693,210
+    Sleep, 250
+    MouseMove 1693, 210
+    DoClick()
+    
+    Sleep, 900
+  }
+  
+  ToolTip
+return
 
 /*
  * Don't get sent to orbit by doing the following at least every 10m:
