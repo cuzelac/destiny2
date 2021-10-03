@@ -2,6 +2,9 @@
 // lines generated from d2gunsmith.com
 // put the following URL in DIM's 'Wish List' config: https://raw.githubusercontent.com/cuzelac/destiny2/master/wishlist
 
+// Legal Action II
+dimwishlist:item=3409645497&perks=1840239774,3177308360,1570042021,3425386926,384158423 // general: fb/sr/hu/r
+
 // Thermal Erosion
 dimwishlist:item=1766088024&perks=2869569095,2848615171 // pve: fp/df
 
