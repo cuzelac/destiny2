@@ -2,6 +2,14 @@
 // lines generated from d2gunsmith.com
 // put the following URL in DIM's 'Wish List' config: https://raw.githubusercontent.com/cuzelac/destiny2/master/wishlist
 
+// Memory Interdict
+dimwishlist:item=3165547384&perks=409831596,951095735,1683379515                        // prox/impulse/db good enough
+dimwishlist:item=3165547384&perks=409831596,951095735,2396489472                        // prox/impulse/cr good enough
+dimwishlist:item=3165547384&perks=1478423395,409831596,951095735,2396489472,3803457565  // vl/prox/impulse/chain blast radius mw
+dimwishlist:item=3165547384&perks=1478423395,3373736292,951095735,2396489472,3803457565 // vl/sticky/impulse/chain blast radius mw
+dimwishlist:item=3165547384&perks=1478423395,409831596,951095735,1683379515,3803457565  // vl/prox/impulse/db blast radius mw
+dimwishlist:item=3165547384&perks=1478423395,3373736292,951095735,1683379515,3803457565 // vl/sticky/impulse/db blast radius mw
+
 // Reed's Regret
 dimwishlist:item=1399243961&perks=2680121939,3400784728,1771339417 // eb/tt/fl
 
