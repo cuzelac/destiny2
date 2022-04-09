@@ -2,6 +2,9 @@
 // lines generated from d2gunsmith.com
 // put the following URL in DIM's 'Wish List' config: https://raw.githubusercontent.com/cuzelac/destiny2/master/wishlist
 
+// Gnawing Hunger
+dimwishlist:item=821154603&perks=,1820235745,3523296417 // sub/demo
+
 // Memory Interdict
 dimwishlist:item=3165547384&perks=409831596,951095735,1683379515                        // prox/impulse/db good enough
 dimwishlist:item=3165547384&perks=409831596,951095735,2396489472                        // prox/impulse/cr good enough
